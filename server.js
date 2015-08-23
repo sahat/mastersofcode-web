@@ -57,6 +57,6 @@ io.on('connection', function (socket) {
     io.sockets.emit("newFundsAdded", amount);
   });
   socket.on('notify', function() {
-    io.sockets.emit('sendNotification', 'Please send a small donation for charity.');
+    io.sockets.emit('sendNotification', 'If you enjoy this song, please help support Taylor Swift\'s MSF charity by making a donation.');
   });
 });
