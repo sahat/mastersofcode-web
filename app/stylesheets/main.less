@@ -9,7 +9,7 @@
 @body-bg: #f9f9f9;
 @text-color: #565a5c;
 @font-family-base: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-//@headings-font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
+@headings-font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
 @link-color: #363f34;
 @font-size-base: 12px;
 @link-hover-color: #141718;
@@ -95,6 +95,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 14px;
 }
 
+.progress span.right {
+  color: #333;
+  text-align: right;
+}
+
 .progress-bar {
   border-radius: 0;
   float: left;
@@ -160,8 +165,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 220px;
   position: absolute;
   left: -10%;
-  transform: scale(1.1);
-  transition: all .5s ease;
+  transform: scale(1.12);
+  transition: all .7s ease;
 
   &:hover {
     transform: scale(1);
@@ -201,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   text-align: right;
   text-transform: uppercase;
+  animation: fadeIn 1.618s infinite alternate;
 }
 
 .price-list {
@@ -249,7 +255,47 @@ i {
   margin-right: 6px;
 }
 
+.media {
+  margin-top: 1px;
+}
+
 .media-object {
   width: 64px;
 }
 
+footer {
+  color: #fff;
+  line-height: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #bbbdbf;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color .2s;
+
+  &:hover,
+  &:focus {
+    color: #333;
+  }
+}
+
+.mc-logo {
+  height: 70px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
