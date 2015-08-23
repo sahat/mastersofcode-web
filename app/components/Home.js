@@ -32,6 +32,7 @@ class Home extends React.Component {
   }
 
   handleNotifyClick() {
+    toastr.success('Notifications have been sent to nearby devices.');
     socket.emit('notify');
   }
 

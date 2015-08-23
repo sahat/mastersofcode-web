@@ -36,6 +36,7 @@ class App extends React.Component {
       </footer>
       <script src="/socket.io/socket.io.js"></script>
       <script src='/js/jquery.min.js'></script>
+      <script src='/js/toastr.min.js'></script>
       <script src='/js/countUp.min.js'></script>
       <script src='/js/bootstrap.min.js'></script>
       <script src='/js/bundle.js'></script>
