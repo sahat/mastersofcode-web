@@ -48,8 +48,7 @@ class Home extends React.Component {
               <div className="row">
                 <div className="col-lg-3 col-md-4 col-sm-5">
                   <div className="image-list">
-                    <img src="http://blog.rdio.com/.a/6a014e87574ac9970d01b7c7024181970b-pi"/>
-
+                    <img src="/img/taylor_swift.jpg"/>
                     <div className="short-info-top"><span>&#x25cf; Live</span></div>
                     <div className="short-info">7:00 PM</div>
                   </div>
@@ -87,7 +86,7 @@ class Home extends React.Component {
             <div className="panel-body">
               <div className="media">
                 <div className="media-left">
-                  <img className="media-object" src="http://image.eveonline.com/Character/1_128.jpg"/>
+                  <img className="media-object" src="/img/avatar.jpg"/>
                 </div>
                 <div className="media-body">
                   <h4 className="media-heading">Sahat Y.</h4>
@@ -97,7 +96,7 @@ class Home extends React.Component {
 
               <div className="media">
                 <div className="media-left">
-                  <img className="media-object" src="http://image.eveonline.com/Character/1_128.jpg"/>
+                  <img className="media-object" src="/img/avatar.jpg"/>
                 </div>
                 <div className="media-body">
                   <h4 className="media-heading">Clarence</h4>
@@ -107,7 +106,7 @@ class Home extends React.Component {
 
               <div className="media">
                 <div className="media-left">
-                  <img className="media-object" src="http://image.eveonline.com/Character/1_128.jpg"/>
+                  <img className="media-object" src="/img/avatar.jpg"/>
                 </div>
                 <div className="media-body">
                   <h4 className="media-heading">Michael C.</h4>
@@ -117,7 +116,7 @@ class Home extends React.Component {
 
               <div className="media">
                 <div className="media-left">
-                  <img className="media-object" src="http://image.eveonline.com/Character/1_128.jpg"/>
+                  <img className="media-object" src="/img/avatar.jpg"/>
                 </div>
                 <div className="media-body">
                   <h4 className="media-heading">Joe</h4>
@@ -151,7 +150,7 @@ class Home extends React.Component {
                 <div className="col-lg-3 col-md-4 col-sm-5">
                   <div className="image-list">
                     <img
-                      src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/11894573_1129030427125061_1749357114485373241_o.jpg"/>
+                      src="/img/roniit.jpg"/>
 
                     <div className="short-info">August 24, 2015 @ 7:00 PM</div>
                   </div>
