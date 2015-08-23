@@ -16,9 +16,7 @@ class Navbar extends React.Component {
             <span className='icon-bar'></span>
             <span className='icon-bar'></span>
           </button>
-          <Link to='/' className='navbar-brand'>
-            Concert Admin Dashboard
-          </Link>
+          <Link className='navbar-brand' to='/'>Live Dashboard</Link>
         </div>
         <div id='navbar' className='navbar-collapse collapse'>
 

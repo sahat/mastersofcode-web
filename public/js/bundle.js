@@ -125,6 +125,8 @@ var App = (function (_React$Component) {
             null,
             'Masters of Code 2015'
           ),
+          _react2['default'].createElement('link', { rel: 'stylesheet', href: 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' }),
+          _react2['default'].createElement('link', { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Montserrat:400,700' }),
           _react2['default'].createElement('link', { rel: 'stylesheet', href: '/css/bootstrap.min.css' }),
           _react2['default'].createElement('link', { rel: 'stylesheet', href: '/css/main.css' })
         ),
@@ -210,7 +212,79 @@ var Home = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { className: 'container' },
-        _react2['default'].createElement('div', { className: 'row' })
+        _react2['default'].createElement(
+          'div',
+          { className: 'row' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'panel' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'panel-body' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'row' },
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-lg-4 col-md-4 col-sm-4' },
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'image-list' },
+                    _react2['default'].createElement('img', { src: 'http://blog.rdio.com/.a/6a014e87574ac9970d01b7c7024181970b-pi' }),
+                    _react2['default'].createElement(
+                      'div',
+                      { className: 'short-info-top' },
+                      '● Live'
+                    ),
+                    _react2['default'].createElement(
+                      'div',
+                      { className: 'short-info' },
+                      '7:00 PM'
+                    )
+                  )
+                ),
+                _react2['default'].createElement('div', { className: 'clearfix visible-xs-block' }),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-lg-6 col-md-6 col-sm-6 col-xs-6' },
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'description-list' },
+                    _react2['default'].createElement(
+                      'h3',
+                      null,
+                      'Taylor Swift'
+                    ),
+                    _react2['default'].createElement(
+                      'p',
+                      null,
+                      'Lorem ipsum dolor sit amet, quem convenire interesset ut vix, ad dicat sanctus detracto vis. Eos modus dolorum ex, qui adipisci maiestatis inciderint no, eos in elit dicat.....'
+                    )
+                  )
+                ),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-lg-2 col-md-2 col-sm-2 col-xs-2' },
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'price-list' },
+                    _react2['default'].createElement(
+                      'div',
+                      null,
+                      _react2['default'].createElement(
+                        'a',
+                        { href: '#', className: 'btn btn-primary' },
+                        _react2['default'].createElement('i', { className: 'ion-android-notifications' }),
+                        'Notify'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          _react2['default'].createElement('div', { className: 'row' })
+        )
       );
     }
   }]);
@@ -276,8 +350,8 @@ var Navbar = (function (_React$Component) {
           ),
           _react2['default'].createElement(
             _reactRouter.Link,
-            { to: '/', className: 'navbar-brand' },
-            'Concert Admin Dashboard'
+            { className: 'navbar-brand', to: '/' },
+            'Live Dashboard'
           )
         ),
         _react2['default'].createElement('div', { id: 'navbar', className: 'navbar-collapse collapse' })

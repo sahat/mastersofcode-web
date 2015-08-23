@@ -11,6 +11,8 @@ class App extends React.Component {
         <meta httpEquiv='X-UA-Compatible' content='IE=edge'/>
         <meta name='viewport' content='width=device-width, initial-scale=1'/>
         <title>Masters of Code 2015</title>
+        <link rel='stylesheet' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'/>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat:400,700'/>
         <link rel='stylesheet' href='/css/bootstrap.min.css'/>
         <link rel='stylesheet' href='/css/main.css'/>
       </head>
