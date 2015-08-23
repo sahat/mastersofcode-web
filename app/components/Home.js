@@ -5,7 +5,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      progressBarWidth: 0,
       fundsRaised: 1400,
       fundsGoal: 2500
     }
@@ -15,25 +14,24 @@ class Home extends React.Component {
     let socket = io.connect();
 
     var fundsRaisedDom = this.refs.fundsRaised.getDOMNode();
-    var fundsRaisedCounter = new CountUp(fundsRaisedDom, 0, this.state.fundsRaised, 0, 2.5, { prefix: '$' });
+    var fundsRaisedCounter = new CountUp(fundsRaisedDom, 0, this.state.fundsRaised, 0, 2, { prefix: '$' });
 
     var fundsGoalDom = this.refs.fundsGoal.getDOMNode();
-    var fundsGoalCounter = new CountUp(fundsGoalDom, this.state.fundsGoal, this.state.fundsGoal, 0, 0, { prefix: '$' });
+    var fundsGoalCounter = new CountUp(fundsGoalDom, 0, this.state.fundsGoal, 0, 0.5, { prefix: '$' });
 
     fundsRaisedCounter.start();
     fundsGoalCounter.start();
 
-    socket.on('newFundsAdded', (data) => {
-      var newFundsRaised = this.state.fundsRaised + data.amount;
-      this.setState({
-        fundsRaised: newFundsRaised,
-        progressBarWidth: parseFloat((newFundsRaised / this.state.fundsGoal) * 100).toFixed(0)
-      });
+    socket.on('newFundsAdded', (amount) => {
+      let newFundsRaised = this.state.fundsRaised + amount;
+      this.setState({ fundsRaised: newFundsRaised });
       fundsRaisedCounter.update(newFundsRaised);
     });
   }
 
   render() {
+    let progressBarWidth = parseFloat(this.state.fundsRaised / this.state.fundsGoal * 100).toFixed(0);
+
     return (
       <div className="container">
         <div className="row">
@@ -66,10 +64,10 @@ class Home extends React.Component {
               </div>
 
               <div className="progress">
-                <div className="progress-bar progress-bar-success" style={{ width: this.state.progressBarWidth + '%' }}>
-                  <span style={this.state.progressBarWidth < 50 ? { color: '#333' } : { color: '#fff' }}
+                <div className="progress-bar progress-bar-success" style={{ width: progressBarWidth + '%' }}>
+                  <span style={progressBarWidth < 50 ? { color: '#333' } : { color: '#fff' }}
                         ref="fundsRaised"></span>
-                  <span style={this.state.progressBarWidth < 90 ? { color: '#333' } : { color: '#fff' }}
+                  <span style={progressBarWidth < 90 ? { color: '#333' } : { color: '#fff' }}
                         className="right" ref="fundsGoal">{this.state.fundsGoal}</span>
                 </div>
               </div>
