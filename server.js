@@ -53,7 +53,8 @@ io.on('connection', function (socket) {
     console.log('User connected ' + data);
   });
   socket.on('newFundsAdded', function(amount) {
-    socket.broadcast.emit(amount);
+    console.log(amount);
+    io.sockets.emit("newFundsAdded", amount);
   });
   socket.on('notify', function() {
     io.sockets.emit('sendNotification', 'Please send a small donation for charity.');
