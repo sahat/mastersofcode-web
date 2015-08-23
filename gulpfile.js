@@ -19,7 +19,7 @@ var production = process.env.NODE_ENV === 'production';
  | Compile only project files, excluding all third-party dependencies.
  |--------------------------------------------------------------------------
  */
-gulp.task('browserify', ['browserify-vendor'], function() {
+gulp.task('browserify', function() {
   return browserify('app/main.js')
     .transform(babelify)
     .bundle()
