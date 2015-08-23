@@ -1,3 +1,11 @@
+// Websocket
+var server = require('http').createServer();
+var url = require('url');
+var WebSocketServer = require('ws').Server;
+var wss = new WebSocketServer({ server: server });
+
+// Express
+var port = 3000;
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -20,8 +28,6 @@ var app = express();
 
 mongoose.connect(config.db);
 
-
-app.set('port', process.env.PORT || 3000);
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -41,6 +47,16 @@ app.use(function(err, req, res, next) {
   res.send({ message: err.message });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + app.get('port'));
+// WebSocket
+
+wss.on('connection', function connection(ws) {
+  var location = url.parse(ws.upgradeReq.url, true);
+
+  ws.on('connect', function incoming(message) {
+    console.log('Connection: %s', message);
+  });
+  ws.send('something');
 });
+
+server.on('request', app);
+server.listen(port, function () { console.log('Express and Websocket server on ' + server.address().port) });
