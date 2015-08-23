@@ -49,7 +49,7 @@ class Home extends React.Component {
                   <div className="image-list">
                     <img src="http://blog.rdio.com/.a/6a014e87574ac9970d01b7c7024181970b-pi"/>
 
-                    <div className="short-info-top">&#x25cf; Live</div>
+                    <div className="short-info-top"><span>&#x25cf; Live</span></div>
                     <div className="short-info">7:00 PM</div>
                   </div>
                 </div>
