@@ -52,7 +52,9 @@ io.on('connection', function (socket) {
   socket.on('connect', function (data) {
     console.log('User connected ' + data);
   });
+  socket.on('newFundsAdded', function(amount) {
+    socket.broadcast.emit(amount);
+  });
   setInterval(function() {
-    socket.emit('newFundsAdded', { amount: 32 });
   }, 1000);
 });
