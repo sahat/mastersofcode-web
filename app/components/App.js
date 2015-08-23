@@ -20,6 +20,7 @@ class App extends React.Component {
       <Navbar />
       <RouteHandler />
       <script src='/js/jquery.min.js'></script>
+      <script src='/js/countUp.min.js'></script>
       <script src='/js/bootstrap.min.js'></script>
       <script src='/js/bundle.js'></script>
       </body>

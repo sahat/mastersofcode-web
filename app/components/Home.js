@@ -12,6 +12,11 @@ class Home extends React.Component {
 
   componentDidMount() {
     HomeStore.listen(this.onChange);
+
+    var element = this.refs.fundsRaised.getDOMNode();
+    var demo = new CountUp(element, 0, 1400, 0, 2.5, { prefix: '$' });
+
+    demo.start();
   }
 
   componentWillUnmount() {
@@ -49,6 +54,12 @@ class Home extends React.Component {
                     <div><a href="#" className="btn btn-primary"><i className="ion-android-notifications"></i>Notify</a></div>
 
                   </div>
+                </div>
+              </div>
+
+              <div className="progress">
+                <div className="progress-bar progress-bar-success" style={{ width: "60%"}}>
+                  <span ref="fundsRaised"></span>
                 </div>
               </div>
 

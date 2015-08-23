@@ -66,6 +66,40 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.progress {
+  position: relative;
+  height: 14px;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: lighten(@btn-success-bg, 48%);
+}
+
+.progress span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  line-height: 14px;
+}
+
+.progress-bar {
+  border-radius: 0;
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  box-shadow: none;
+  transition: width .6s ease;
+}
+
+.progress-bar-success {
+  background-color: @btn-success-bg;
+}
+
 .table {
   font-size: inherit;
 }
@@ -113,6 +147,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 220px;
   position: absolute;
   left: -10%;
+  transform: scale(1.1);
+  transition: all .5s ease;
+
+  &:hover {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 799px) {
@@ -149,7 +189,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-
 .price-list {
   height: 220px;
   font-size: 38px;
@@ -168,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .description-list {
-  padding: 10px 20px;
+  padding: 10px 0;
   border-right: 1px solid #ededed;
   height: 220px;
 }
