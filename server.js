@@ -20,7 +20,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-mongoose.connect(config.db);
+//mongoose.connect(config.db);
 
 app.set('port', process.env.PORT || 3000);
 app.use(compression());
@@ -55,6 +55,7 @@ io.on('connection', function (socket) {
   socket.on('newFundsAdded', function(amount) {
     socket.broadcast.emit(amount);
   });
-  setInterval(function() {
-  }, 1000);
+  socket.on('notify', function() {
+    io.sockets.emit('sendNotification', 'Please send a small donation for charity.');
+  });
 });
