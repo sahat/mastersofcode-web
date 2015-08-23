@@ -121,6 +121,7 @@ class Home extends React.Component {
             </div>
           </div>
 
+
           <div className="text-center">
             <ul className="pagination">
               <li><a href="#">Prev</a></li>
@@ -131,6 +132,31 @@ class Home extends React.Component {
               <li><a href="#">5</a></li>
               <li><a href="#">Next</a></li>
             </ul>
+          </div>
+
+          <hr/>
+
+          <h2 className="text-center"><span className="accent">Upcoming</span> Events</h2>
+
+          <div className="panel">
+            <div className="panel-body">
+
+              <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-5">
+                  <div className="image-list">
+                    <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/11894573_1129030427125061_1749357114485373241_o.jpg"/>
+                    <div className="short-info">August 24, 2015 @ 7:00 PM</div>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-7 col-xs-8">
+                    <h3>Roniit</h3>
+
+                    <p>Lorem ipsum dolor sit amet, quem convenire interesset ut vix, ad dicat sanctus detracto vis. Eos
+                      modus dolorum ex, qui adipisci maiestatis inciderint no, eos in elit dicat.....</p>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
