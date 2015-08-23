@@ -68,7 +68,6 @@ class Home extends React.Component {
             </div>
           </div>
 
-
           <h2 className="text-center"><span className="accent">Top</span> Contributors</h2>
 
           <div className="panel">
@@ -117,11 +116,23 @@ class Home extends React.Component {
                 <div className="media-body">
                   <h4 className="media-heading">Joe</h4>
                   <div className="text-success"><i className="ion-social-usd"></i>40</div>
-
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="text-center">
+            <ul className="pagination">
+              <li><a href="#">Prev</a></li>
+              <li className="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     );

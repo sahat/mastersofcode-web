@@ -66,6 +66,9 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+a {
+  transition: all .2s;
+}
 
 .text-success{
   color: @btn-success-bg;
@@ -206,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   text-align: right;
   text-transform: uppercase;
-  animation: fadeIn 1.618s infinite alternate;
+  animation: fadeIn 1s infinite alternate;
 }
 
 .price-list {
@@ -242,6 +245,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+
+.pagination {
+  margin-top: 0;
+  transition: all .2s;
+}
+
+@pagination-active-bg: #555;
+@pagination-active-border: #555;
+@pagination-active-color: #fff;
+@pagination-bg: #fff;
+@pagination-color: #888;
+@pagination-hover-bg: #f9f9f9;
+@pagination-hover-color: #333;
+
+
 .btn {
   transition: all .2s;
 }
@@ -266,9 +284,9 @@ i {
 footer {
   color: #fff;
   line-height: 20px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #bbbdbf;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #bbbdbe;
 }
 
 footer h2 {
