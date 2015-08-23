@@ -62,9 +62,9 @@ class Home extends React.Component {
               <div className="progress">
                 <div className="progress-bar progress-bar-success" style={{ width: "60%"}}>
                   <span ref="fundsRaised"></span>
+                  <span className="right" ref="fundsGoal">$2,500</span>
                 </div>
               </div>
-
             </div>
           </div>
 

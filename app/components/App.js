@@ -19,6 +19,21 @@ class App extends React.Component {
       <body>
       <Navbar />
       <RouteHandler />
+      <footer>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-8 vcenter">
+              <h2>MasterCard Masters of Code 2015: San Francisco</h2>
+              <p>Powered by <strong>Node.js</strong>, <strong>Socket.IO</strong>, <strong>MongoDB</strong> and (Isomorphic) <strong>React</strong> with <strong>Flux</strong> architecture.</p>
+              <p>APIs used: <strong>MasterCard</strong> and <strong>Twitter Digits</strong>.</p>
+              <p>You may view the <a href='https://github.com/sahat/newedenfaces-react'>Source Code</a> behind this project on GitHub.</p>
+              <p>© 2015 <a href="https://github.com/sahat">Sahat Yalkabov</a>, <a href="https://github.com/clarle">Clarence Leung</a>, <a href="https://github.com/michaelchum">Michael Ho Chum</a>.</p>
+            </div>
+            <div className="col-xs-4 text-center vcenter"><img className="mc-logo" src="/img/mastercard.png"/>
+            </div>
+          </div>
+        </div>
+      </footer>
       <script src='/js/jquery.min.js'></script>
       <script src='/js/countUp.min.js'></script>
       <script src='/js/bootstrap.min.js'></script>
