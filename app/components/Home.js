@@ -49,14 +49,15 @@ class Home extends React.Component {
                     <div className="short-info">7:00 PM</div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-5 col-xs-6">
+                <div className="col-lg-6 col-md-6 col-sm-5">
                   <div className="description-list">
                     <h3>Taylor Swift</h3>
-                    <p>Lorem ipsum dolor sit amet, quem convenire interesset ut vix, ad dicat sanctus detracto vis. Eos
-                      modus dolorum ex, qui adipisci maiestatis inciderint no, eos in elit dicat.....</p>
+                    <p>
+                      Taylor’s sponsored charity for the Celebrity Charity Fundraising Concert is Doctors without Borders / Médecins Sans Frontières.  MSF provides assistance to populations in distress, to victims of natural or man-made disasters, and to victims of armed conflict. They do so irrespective of race, religion, creed, or political convictions.
+                    </p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div className="col-lg-2 col-md-2 col-sm-2">
                   <div className="price-list">
                     <div><a href="#" className="btn btn-primary"><i className="ion-android-notifications"></i>Notify</a>
                     </div>
@@ -152,9 +153,9 @@ class Home extends React.Component {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-7 col-xs-8">
                   <h3>Roniit</h3>
-
-                  <p>Lorem ipsum dolor sit amet, quem convenire interesset ut vix, ad dicat sanctus detracto vis. Eos
-                    modus dolorum ex, qui adipisci maiestatis inciderint no, eos in elit dicat.....</p>
+                  <p>
+                    Roniit’s sponsored charity for the Celebrity Charity Fundraising Concert is UNICEF.  UNICEF, the United Nations Children's Fund, is mandated by the United Nations General Assembly to advocate for the protection of children's rights, to help meet their basic needs and to expand their opportunities to reach their full potential.
+                  </p>
                 </div>
               </div>
 
