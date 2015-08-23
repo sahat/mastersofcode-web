@@ -1,20 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+let socket;
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fundsRaised: 1400,
-      fundsGoal: 2500
+      fundsRaised: 2067.43,
+      fundsGoal: 3000
     }
   }
 
   componentDidMount() {
-    let socket = io.connect();
+    socket = io.connect();
 
     var fundsRaisedDom = this.refs.fundsRaised.getDOMNode();
-    var fundsRaisedCounter = new CountUp(fundsRaisedDom, 0, this.state.fundsRaised, 0, 2, { prefix: '$' });
+    var fundsRaisedCounter = new CountUp(fundsRaisedDom, 0, this.state.fundsRaised, 2, 2, { prefix: '$' });
 
     var fundsGoalDom = this.refs.fundsGoal.getDOMNode();
     var fundsGoalCounter = new CountUp(fundsGoalDom, 0, this.state.fundsGoal, 0, 0.5, { prefix: '$' });
@@ -27,6 +29,10 @@ class Home extends React.Component {
       this.setState({ fundsRaised: newFundsRaised });
       fundsRaisedCounter.update(newFundsRaised);
     });
+  }
+
+  handleNotifyClick() {
+    socket.emit('notify');
   }
 
   render() {
@@ -57,7 +63,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col-lg-2 col-md-2 col-sm-2">
                   <div className="price-list">
-                    <div><a href="#" className="btn btn-primary"><i className="ion-android-notifications"></i>Notify</a>
+                    <div><a href="#" className="btn btn-primary" onClick={this.handleNotifyClick}><i className="ion-android-notifications"></i>Notify</a>
                     </div>
                   </div>
                 </div>
