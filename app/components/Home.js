@@ -30,15 +30,14 @@ class Home extends React.Component {
             <div className="panel-body">
 
               <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-4">
+                <div className="col-lg-3 col-md-4 col-sm-5">
                   <div className="image-list">
                     <img src="http://blog.rdio.com/.a/6a014e87574ac9970d01b7c7024181970b-pi"/>
                     <div className="short-info-top">&#x25cf; Live</div>
                     <div className="short-info">7:00 PM</div>
                   </div>
                 </div>
-                <div className="clearfix visible-xs-block"></div>
-                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div className="col-lg-6 col-md-6 col-sm-5 col-xs-6">
                   <div className="description-list">
                     <h3>Taylor Swift</h3>
                     <p>Lorem ipsum dolor sit amet, quem convenire interesset ut vix, ad dicat sanctus detracto vis. Eos
