@@ -1,11 +1,3 @@
-// Websocket
-var server = require('http').createServer();
-var url = require('url');
-var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({ server: server });
-
-// Express
-var port = 3000;
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -25,14 +17,21 @@ var Donation = require('./models/donation');
 var User = require('./models/user');
 
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 mongoose.connect(config.db);
 
+app.set('port', process.env.PORT || 3000);
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+server.listen(app.get('port'), function() {
+  console.log('Express and websocket server listening on port ' + app.get('port'));
+});
 
 app.use(function(req, res) {
   Router.run(routes, req.path, function(Handler) {
@@ -47,16 +46,10 @@ app.use(function(err, req, res, next) {
   res.send({ message: err.message });
 });
 
-// WebSocket
-
-wss.on('connection', function connection(ws) {
-  var location = url.parse(ws.upgradeReq.url, true);
-
-  ws.on('connect', function incoming(message) {
-    console.log('Connection: %s', message);
+io.on('connection', function (socket) {
+  console.log('Connection detected');
+  socket.emit('connected', 'hahaha');
+  socket.on('connect', function (data) {
+    console.log('User connected ' + data);
   });
-  ws.send('something');
 });
-
-server.on('request', app);
-server.listen(port, function () { console.log('Express and Websocket server on ' + server.address().port) });
