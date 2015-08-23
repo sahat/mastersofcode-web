@@ -49,7 +49,6 @@
 @panel-default-border: #dee5e7;
 @panel-border-radius: 2px;
 @panel-default-heading-bg: #f6f8f8;
-@hr-border: #ddd;
 @screen-sm: 800px;
 
 html {
@@ -70,7 +69,7 @@ a {
   transition: all .2s;
 }
 
-.text-success{
+.text-success {
   color: @btn-success-bg;
 }
 
@@ -246,7 +245,6 @@ a {
   padding: 0;
 }
 
-
 .pagination {
   margin-top: 0;
   transition: all .2s;
@@ -259,7 +257,6 @@ a {
 @pagination-color: #888;
 @pagination-hover-bg: #f9f9f9;
 @pagination-hover-color: #333;
-
 
 .btn {
   transition: all .2s;
@@ -314,11 +311,19 @@ footer a {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from {
+    opacity: 0;
+  }
 }
 
 .vcenter {
   display: inline-block;
   vertical-align: middle;
   float: none;
+}
+
+hr {
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, .2), transparent);
+  height: 1px;
+  border: 0;
 }
